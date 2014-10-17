@@ -1,0 +1,569 @@
+* {
+    font-family: 'Raleway';
+}
+
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+.capped {
+    text-transform: uppercase;
+}
+
+body {
+    font-size: 1.5em;
+}
+
+body > div {
+    margin: 2em;
+}
+
+body > .modal, body > .modal-backdrop {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    display: inline;
+}
+
+p {
+    font-size: .8em;
+}
+
+.error {
+    color: #B44;
+}
+
+.success {
+    color: #4B4;
+}
+
+.hidden {
+    visibility: none;
+}
+
+.clear {
+    clear: both;
+}
+
+div.page-number {
+    text-align: center;
+    border-radius: .5em;
+}
+
+div.page-number:hover {
+    cursor: pointer;
+    color: #11B;
+    background-color: #F9F9F9;
+}
+
+div.page-number-active {
+    color: #119;
+    background-color: #FBFBFB;
+}
+
+div.tile {
+    box-shadow:rgba(0,91,180,0.7) 0px 0px 20px;
+    margin: 1em;
+    border-radius: 8px;
+    height: 15em;
+}
+
+div.tile:hover {
+    box-shadow:rgba(0,91,180,0.9) 0px 0px 30px;
+    cursor: pointer;
+}
+
+div.text-centered {
+    text-align: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.cursor:hover {
+    cursor: pointer;
+}
+
+input, .btn {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
+}
+
+.ajaxLoader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(/views/images/loading.gif) scroll no-repeat 50% 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* header */
+#header {
+	height: 100px;
+    margin: 0 0 4px 0;
+    padding: 20px 0px 10px 0px;
+    -moz-box-shadow: -4px 6px 10px -2px #555;
+    -webkit-box-shadow: -4px 6px 10px -2px #555;
+    box-shadow: -4px 6px 10px -2px #555;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+#header > div:first-child {
+    margin-left: 100px;
+}
+
+#header > div:last-child {
+    float: right;
+    margin: 18px 20px 0 0;
+}
+
+#header > div {
+    display: inline-block;
+    width: 300px;
+}
+
+#header > div a {
+
+}
+
+#header > div .btn {
+    width: 170px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+#header img {
+    padding: 0;
+}
+
+
+/* footer */
+footer {
+    background: #313131;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: -1;
+    height: 100px;
+}
+
+footer > div {
+    padding: 4px 0;
+}
+
+footer > div:first-child a {
+    color: #5c5c5c;
+    font-size: 12px;
+    border-left: 1px solid #5c5c5c;
+    padding: 0 5px;
+    text-decoration: none;
+}
+
+footer > div:first-child a:first-child {
+    border-left: none;
+}
+
+footer > div:first-child a:hover {
+    color: #fff;
+}
+
+footer > div > div {
+    padding: 20px 0;
+}
+
+footer > div:last-child > div {
+    padding: 10px 0 0 0;
+}
+
+footer p a:hover {
+    text-decoration: none;
+}
+
+.stickyFooter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+
+
+/* settings dropdown */
+.settingsDropdown {
+    position: relative;
+}
+
+.settingsDropdown p {
+    font-size: 18px;
+}
+
+.settingsDropdown p span {
+
+}
+
+.settingsDropdown p span i {
+    margin-left: 10px;
+    color: #000;
+}
+
+.settingsDropdown p:hover + .dropdown {
+    /* max-height: 600px; */
+}
+
+.settingsDropdown .dropdown {
+    width: 222px;
+    margin-top: 12px;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    /* max-height: 0; */
+    /* overflow: hidden; */
+    display: none;
+    z-index: 1000;
+    -webkit-transition: max-height 500ms ease;
+       -moz-transition: max-height 500ms ease;
+        -ms-transition: max-height 500ms ease;
+         -o-transition: max-height 500ms ease;
+            transition: max-height 500ms ease;
+}
+
+.settingsDropdown .dropdown:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #eee;
+    position: absolute;
+    top: -10px;
+    right: 14px;
+}
+
+.settingsDropdown .dropdown ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.settingsDropdown .dropdown ul li {
+
+}
+
+
+.settingsDropdown .dropdown ul li a {
+    display: block;
+    padding: 12px 15px;
+    width: 100%;
+    background: #eee;
+    color: #8d8d8d;
+    font-size: 18px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.settingsDropdown .dropdown ul li a:hover {
+    background: #295785;
+    color: #fff;
+}
+
+.settingsDropdown .dropdown ul li a span {
+    float: right;
+}
+
+
+/* custom margin offset */
+.col-sm-offset-custom-1 {
+    margin-left: 4%;
+}
+
+
+/* triangles */
+.arrow-up:after {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+}
+
+.arrow-down:after {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+}
+
+
+.hide-for-large {
+    display: none;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------
+----- MODALS ------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------*/
+
+#addClientModal {
+    padding: 1em;
+}
+
+div.modal-container {
+    border-radius: 0px;
+    background-color: #f6f6f6;
+    color: #597897;
+    padding: 1.25em;
+}
+
+.modal-contacts {
+    background-color: #fff;
+    border: 1px solid #b4b4b4;
+    min-height: 60px;
+}
+
+div.group-drop-hover {
+    background-color: #CCC;
+}
+
+.input-field {
+    width: 100%;
+    margin-top: 0.5em;
+}
+
+.input-label {
+    margin-top: 0.5em;
+    text-align: right;
+}
+
+.mifilter-modal h1, .mifilter-modal h2, .mifilter-modal h3, .mifilter-modal h4, .mifilter-modal h5 {
+    display: block;
+    font-weight: 300;
+}
+
+.mifilter-modal .saveWrapper {
+    text-align: center;
+}
+
+.mifilter-modal .categoriesKeywordsWrapper {
+    overflow: hidden;
+    margin: 20px auto auto auto;
+}
+
+
+.mifilter-modal .categoriesKeywordsWrapper h4 {
+    margin: 10px auto;
+}
+
+.mifilter-modal .categoriesKeywordsWrapper select {
+    margin: 5px auto auto auto;
+}
+
+.mifilter-modal .input-field {
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    margin-top: 0.5em;
+}
+
+.mifilter-modal p {
+    font-size: 14px;
+}
+
+.mifilter-modal .tabsContent ul.tagit {
+    background: #fff;
+}
+
+.mifilter-modal .modalTabs {
+    overflow: hidden;
+    text-align: center;
+}
+
+.mifilter-modal .modalTabs > div {
+    width: 50%;
+    float: left;
+}
+
+.mifilter-modal#groupModal .modalTabs > div {
+    width: 100%;
+}
+
+.mifilter-modal .modalTabs > div a {
+    background-color: #6686a7;
+    color: #efefef;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.mifilter-modal .modalTabs > div a:hover {
+    background-color: #106885;
+    color: #fff;
+}
+
+.mifilter-modal .modalTabs > div.active a {
+    background-color: #295785;
+    color: #fff;
+}
+
+.mifilter-modal .modalTabs.editing > div {
+    width: 100%;
+}
+
+.mifilter-modal .modalTabs.editing > div:last-child {
+    display: none;
+}
+
+.mifilter-modal .modalTabs.editing > div a {
+    cursor: default;
+}
+
+.mifilter-modal .modalTabs.editing > div a:hover {
+    background-color: #295785;
+    color: #fff;
+}
+
+.mifilter-modal .modalTabs.editing > div.active a {
+    background-color: #295785;
+    color: #fff;
+}
+
+
+.mifilter-modal .import {
+    padding: 10px;
+    display: none;
+}
+
+.mifilter-modal .import #divUploadList {
+    padding: 30px;
+}
+
+
+.mifilter-modal #delClient, .mifilter-modal #confirmDelClient {
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.mifilter-modal #delGroup, .mifilter-modal #confirmDelGroup {
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.mifilter-modal .saveWrapper button.close {
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+    font-size: 16px;
+}
+
+.mifilter-modal .saveWrapper .error, .mifilter-modal .saveWrapper .success {
+    display: block;
+}
+
+
+.modal#groupModal h2 {
+    text-align: center;
+}
+
+.mifilter-modal #groupModalAddContacts, .mifilter-modal #groupModalContacts {
+    overflow: hidden;
+    min-height: 30px;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.mifilter-modal #groupModalAddContacts div {
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    width: 50%;
+    float: left;
+}
+
+.mifilter-modal #groupModalAddContacts div a {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.mifilter-modal #groupModalAddContacts div a:hover {
+    background: #007dc3;
+    color: #fff;
+}
+
+.mifilter-modal #groupModalContacts {
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+}
+
+.mifilter-modal #groupModalContacts div {
+    width: 50%;
+    float: left;
+}
+
+.mifilter-modal #groupModalContacts div a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.mifilter-modal #groupModalContacts div a:hover {
+    background: #007dc3;
+    color: #fff;
+}
+
+#clientCategory, #groupCategory {
+    width: 50%;
+    margin-left: 0;
+}
+
+/* buttons */
+.mifilter-modal .btn {
+    height: auto;
+    background-color: #526e82;
+    color: #f1f1f2;
+    font-size: 12px;
+}
+
+
+.mifilter-modal .btn:hover, .mifilter-modal .btn:active {
+    color: #fff;
+    background-color: #354855;
+}
+
+.mifilter-modal .btn-cancel {
+    background-color: #999;
+}
+
+.mifilter-modal .btn-save {
+    margin: 20px;
+    width: 200px;
+    font-size: 20px;
+}
