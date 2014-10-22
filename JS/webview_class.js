@@ -1,6 +1,6 @@
 /*! \file webview_class.js
- *	\brief This is a class used to handle all webview "stuff".  Use this to preload and show views.
- *	Remember to only push a view from the webview that pre-loaded it
+ *    \brief This is a class used to handle all webview "stuff".  Use this to preload and show views.
+ *    Remember to only push a view from the webview that pre-loaded it
 */
 
 // class - webivew - for handling anything related to webviews for our app.  Due to android limitations we need to do all this from the initial page
@@ -15,8 +15,8 @@ function webview (options) {
     };
     
     for ( var i in options ) {      //override any defaults
-		this.options[i] = options[i];
-	}
+        this.options[i] = options[i];
+    }
 }
 
 // Define our additional functions/variables for our webview class
@@ -39,47 +39,47 @@ webview.prototype = {
         
         this._doShow();
     },
-	
-	//Public - this is how we show a page
+    
+    //Public - this is how we show a page
     loadDrawer: function (options) {
-		for ( var i in options ) {      //override any defaults
+        for ( var i in options ) {      //override any defaults
             this.options[i] = options[i];
         }
-		
-		var pageID = this._getPageID();
+        
+        var pageID = this._getPageID();
         if (pageID == 0)
             return;
         
         var pre = new steroids.views.WebView("/views/settings/settings.html");
-		//var locWebview = new webview(this.options);
+        //var locWebview = new webview(this.options);
         
-		pre.preload({}, {
+        pre.preload({}, {
             onSuccess: function () {
-				console.log("***************preload success: ");
-				var pre2 = new steroids.views.WebView("/views/settings/settings.html");
-				steroids.drawers.update({
-					left: pre2
-				  });
-				console.log("***************preload success done");
+                console.log("***************preload success: ");
+                var pre2 = new steroids.views.WebView("/views/settings/settings.html");
+                steroids.drawers.update({
+                    left: pre2
+                  });
+                console.log("***************preload success done");
             }
         });
     },
-	
-	//Public - this is how we show a drawer
+    
+    //Public - this is how we show a drawer
     showDrawer: function () {
-		steroids.drawers.show( {
-			edge: steroids.screen.edges.LEFT
-		  }, {
-			onSuccess: function() {
-			  console.log("Drawer opening...")
-			},
-			onFailure: function(error) {
-			 //console.log("Could not show the drawer: " + error.errorDescription);
-			 console.log("Could not show the drawer: ");
-			}
-		  });
-		
-		console.log("***************shown");
+        steroids.drawers.show( {
+            edge: steroids.screen.edges.LEFT
+          }, {
+            onSuccess: function() {
+              console.log("Drawer opening...")
+            },
+            onFailure: function(error) {
+             //console.log("Could not show the drawer: " + error.errorDescription);
+             console.log("Could not show the drawer: ");
+            }
+          });
+        
+        console.log("***************shown");
     },
     
     //Low-level get's the json object to identify a specific page
@@ -101,10 +101,10 @@ webview.prototype = {
                 return {location: "/views/checkout/checkout.html", id: "checkout"};
             case 'home':
                 return {location: "/views/homepage/homepage.html", id: "home"};
-			case 'login':
+            case 'login':
                 return {location: "/views/login/login.html", id: "login"};
-			case 'forgotpassword':
-				return {location: "/views/forgotpassword/forgotpassword.html", id: "forgotpassword"};
+            case 'forgotpassword':
+                return {location: "/views/forgotpassword/forgotpassword.html", id: "forgotpassword"};
             default:
                 return 0;
         }
@@ -164,19 +164,19 @@ webview.prototype = {
             }
         });
     },
-	
-	//Actually does a drawer style page
-	_doDrawer: function () {
+    
+    //Actually does a drawer style page
+    _doDrawer: function () {
         var pageID = this._getPageID();
-		
+        
         if (pageID == 0)
             return;
         
         var pre = new steroids.views.WebView(pageID);
-		/*
-		steroids.drawers.update({
-			left: pre,
-		});
-		*/
+        /*
+        steroids.drawers.update({
+            left: pre,
+        });
+        */
     },
 }
