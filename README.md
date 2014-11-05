@@ -51,6 +51,9 @@ default.css and homepage.css.  I will typically create a default.css file which 
 website, and then create page specific css files to try to manage the size.  Nothing fancy here as far as using
 LESS or anything.
 
+app.css - This came from a hybrid AppGyver app I created.  It showcases some animations and some more complex
+css3 sorts of functionality.
+
   //---------------------------------------------------------------------------------------------------------------//
  //----- Python --------------------------------------------------------------------------------------------------//
 //---------------------------------------------------------------------------------------------------------------//

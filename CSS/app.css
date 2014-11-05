@@ -1,0 +1,514 @@
+@font-face {
+    font-family: 'Cream';
+    src: url(Cream-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'HelNeuThin';
+    src: url(HelveticaNeueLTStd-Th.otf);
+}
+
+@font-face {
+    font-family: 'Asap';
+    src: url(Asap-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'AsapBold';
+    src: url(Asap-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'AsapItalic';
+    src: url(Asap-Italic.ttf);
+}
+
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(360deg);}
+    to {-webkit-transform: rotate(0deg);}
+}
+
+@-webkit-keyframes itemCircleRotate {
+    0% {-webkit-transform:scale(0);}
+    100% {-webkit-transform:scale(1);}
+}
+
+@-webkit-keyframes buttonAction {
+    0% {-webkit-transform:scale(1);}
+    50% {-webkit-transform:scale(1.2);}
+    100% {-webkit-transform:scale(1);}
+}
+
+@-webkit-keyframes loadingMovement {
+    0% {-webkit-transform:translateX(0);}
+    50% {-webkit-transform:translateX(-50%);}
+    100% {-webkit-transform:translateX(0);}
+}
+
+@-webkit-keyframes shareFBAnimate {
+    0% {-webkit-transform:translateY(0) rotate(-180deg);}
+    80% {-webkit-transform:translateY(-9em) rotate(10deg);}
+    100% {-webkit-transform:translateY(-9em) rotate(0deg);}
+}
+
+@-webkit-keyframes shareTwitterAnimate {
+    0% {-webkit-transform:translateY(0) rotate(-180deg);}
+    80% {-webkit-transform:translateY(-6em) rotate(10deg);}
+    100% {-webkit-transform:translateY(-6em) rotate(0deg);}
+}
+
+@-webkit-keyframes sharePinterestAnimate {
+    0% {-webkit-transform:translateY(0) rotate(-180deg);}
+    80% {-webkit-transform:translateY(-3em) rotate(10deg);}
+    100% {-webkit-transform:translateY(-3em) rotate(0deg);}
+}
+
+@-webkit-keyframes shareFBAnimateBack {
+    0% {-webkit-transform:translateY(-9em) rotate(0deg);}
+    40% {-webkit-transform:translateY(-9em) rotate(40deg);}
+    100% {-webkit-transform:translateY(0) rotate(-180deg);}
+}
+
+@-webkit-keyframes shareTwitterAnimateBack {
+    0% {-webkit-transform:translateY(-6em) rotate(0deg);}
+    40% {-webkit-transform:translateY(-6em) rotate(40deg);}
+    100% {-webkit-transform:translateY(0) rotate(-180deg);}
+}
+
+@-webkit-keyframes sharePinterestAnimateBack {
+    0% {-webkit-transform:translateY(-3em) rotate(0deg);}
+    40% {-webkit-transform:translateY(-3em) rotate(40deg);}
+    100% {-webkit-transform:translateY(0) rotate(-180deg);}
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Asap;
+    font-size: 100%;
+    margin: 0px;
+    padding: 0px;    
+    /*background-image:url('/images/login_background.jpg');
+    background-size: cover;*/
+    /*overflow: hidden; */
+}
+
+input {
+    font-family: Asap;
+    height: 23px;
+    font-size: 0.8em;
+    color: rgba(0,0,0,1.00);
+    letter-spacing: 0.05em;
+    width: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    display: inline;
+}
+
+#wrapper, #item-wrapper {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+#cream-spacer {
+    position:   absolute;
+    top:        0px;
+    text-align: center;
+    z-index: 10;
+}
+
+.blurry {
+    -webkit-filter: blur(4px); 
+    -moz-filter: blur(4px); 
+    filter: blur(4px);
+}
+
+.error { color: #DC1B57;}
+
+.clear { clear: both;}
+.cream-font { font-family: Cream;}
+.three-quarter-round {
+    border-top-right-radius: .5em;
+    border-bottom-right-radius: .5em;
+    border-bottom-left-radius: .5em
+}
+.input-error {
+    box-shadow: inset 5px 0px rgba(197,56,104,1);
+}
+
+.button-animate {
+    -webkit-animation-name: buttonAction;
+    -webkit-animation-duration:.33s;
+    -webkit-animation-iteration-count: 1;
+}
+
+span.closet-red {
+    color: #E34 !important;
+}
+
+span.icons {
+    padding: .2em 0 .2em 0;
+}
+
+div.parent {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+img.fullWidth {
+    width: 100%;
+}
+
+div.gradient-background {
+    height: 100%;
+    width: 100%;
+    background: -webkit-linear-gradient(white, rgb(240,227,232), rgb(252,243,231));
+}
+
+img.background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+div.footer-item {
+    height: 90px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 6px 0 6px;
+    background-color: white;
+    text-align: center;
+    width: 90px;
+}
+
+div.footer-item img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.square {
+    border-radius: 0px;
+    border: 1px;
+}
+
+span.title {
+    font-size: 1.2em;
+}
+
+span.item-brand, span.blogger-name {
+    font-size: 1.2em;
+}
+
+/* Images --------------------------------------------------------------------*/
+img.white-heart {
+    max-height: 3em;
+}
+
+
+/* Misc js -------------------------------------------------------------------*/
+
+div.item-circle-rotate {
+    -webkit-animation-name: itemCircleRotate;
+    -webkit-animation-duration:.25s;
+    -webkit-animation-iteration-count: 1;
+}
+
+div.side-item {
+    position: absolute;
+    left: 1em;
+}
+
+div.item-circle-wrapper {
+    border-radius: 50%;
+    border: solid #C1C1C1 1px;
+    display: block;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+div.item-circle {
+    border-radius: 50%;
+    display: block;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+    height: 98%;
+    width: 98%;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+div.item-circle img {
+    /*max-width: 100%;
+    max-height: 100%;*/
+    height: 95%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+/* Help Screen ---------------------------------------------------------------*/
+#helpScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: none;
+}
+
+/* Action Div ----------------------------------------------------------------*/
+
+#actionDiv {
+    position: fixed;
+    top:    10px;
+    right:  -11px;
+    font-size: 1.5em;
+    z-index: 99;
+}
+
+#actionDiv div {
+    text-align: right;
+    min-width: 30px;
+}
+
+#actionDiv div span {
+    padding: 20px 22px 5px 5px;
+}
+
+/* Sharing -------------------------------------------------------------------*/
+#shareScreen {
+    z-index     : 100;
+    position    : absolute;
+    top         : 0px;
+    left        : 0px;
+    height      : 100%;
+    width       : 100%;
+}
+
+#shareScreen div {
+    right: 0em;
+}
+
+div.share-fb-animate {
+    -webkit-animation-name: shareFBAnimate;
+    -webkit-animation-duration:.4s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode:forwards;
+}
+
+div.share-twitter-animate {
+    -webkit-animation-name: shareTwitterAnimate;
+    -webkit-animation-duration:.4s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode:forwards;
+}
+
+div.share-pinterest-animate {
+    -webkit-animation-name: sharePinterestAnimate;
+    -webkit-animation-duration:.4s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode:forwards;
+}
+
+div.share-fb-animate-back {
+    -webkit-animation-name: shareFBAnimateBack;
+    -webkit-animation-duration:.4s;
+}
+
+div.share-twitter-animate-back {
+    -webkit-animation-name: shareTwitterAnimateBack;
+    -webkit-animation-duration:.4s;
+}
+
+div.share-pinterest-animate-back {
+    -webkit-animation-name: sharePinterestAnimateBack;
+    -webkit-animation-duration:.4s;
+}
+
+/* Buttons -------------------------------------------------------------------*/
+
+div.button {
+    background-color: #EEE;
+    border-radius: 33%/100%;
+    border: 1px solid #CCC;
+    padding: .5em;
+    text-align:center;
+    font-size: .9em;
+    width:90%;
+    color: #777;
+}
+
+div.big-button {
+    font-size: 1.5em;
+}
+
+div.wide-button {
+    border-radius: 25%/100% !important;
+}
+
+/* Inputs -----------------------------------------------------------------*/
+div.input-wrapper {
+    width: 100%;
+}
+
+::-webkit-input-placeholder { 
+    color:#AAA; 
+    letter-spacing: 0px;
+}
+
+input, select.input-look {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -webkit-appearance: none;
+    border-radius: 0;
+    border-color: #C1C1C1;
+    font-size: 1.5em;
+    line-height: 2em;
+    height: 2em;
+    letter-spacing: 0px;
+    padding-left: 1em;
+    color: #777;
+    background-color: white;
+}
+/*
+select {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+}
+*/
+
+/* Footer CSS stuff ----------------------------------------------------------*/
+
+div.default-icon {
+    height: 1.3em;
+    width: 1.3em;
+    position: absolute;
+    padding: 1em;
+    margin-left: -1em;
+}
+
+div.default-icon img {
+    max-height: 66%;
+    position: absolute;
+    top: .66em;
+    left: .66em;
+}
+
+div.center-icon {
+    position: relative !important;
+    margin: 0 auto;
+}
+
+div.bottom-icons {
+    bottom: .5em;
+}
+
+div.top-icons {
+    top: .5em;
+}
+
+div.cart {
+    right: 0em;
+}
+
+div.settings {
+    left: .75em;
+}
+
+div.cart .cart-qty {
+    color: #DC1B57;
+    font-size: .7em;
+    position: absolute;
+    top: 44.5%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+div.share-parent {
+    z-index: 102;
+}
+
+div.share {
+    right: 0em
+}
+
+div.closet {
+    right: 2.75em;
+}
+
+div.heart {
+    right: 5.5em
+}
+
+div.back-grid {
+    left: 0.75em;
+}
+
+#iconSettings, #iconGoToCloset, #iconCart {
+    padding-right: 10px;
+}
+
+/*  Loading Screen -----------------------------------------------------*/
+
+#loadingScreen {
+    z-index: 1000;
+    position: absolute;
+    top:    0px;
+    left: -10000px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#loadingScreen div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 0.3em;
+    background: -webkit-linear-gradient(left, #DC1B57, #FFDCCD, #DC1B57);
+    -webkit-animation-name:            loadingMovement;
+    -webkit-animation-duration:        2.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+#heartScreen {
+    z-index: 999;
+    position: absolute;
+    top:    0px;
+    left:   0px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: 35%;
+    font-size: 2.5em;
+}
+
+#heartScreen span {
+    background-color: #DDD;
+    padding: 1em;
+    border-radius: 50%;
+}
+
