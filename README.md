@@ -50,3 +50,12 @@ I'm not sure what someone looks for with CSS, but I grabbed two files from the M
 default.css and homepage.css.  I will typically create a default.css file which has css for the entire project or
 website, and then create page specific css files to try to manage the size.  Nothing fancy here as far as using
 LESS or anything.
+
+  //---------------------------------------------------------------------------------------------------------------//
+ //----- Python --------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------------//
+test.py - Starting to get more into Python.  Created this as a simple function for ordering elements in a file.  The goal
+here is to order strings alphabetically and numbers ascending, however the if a number is in the third position,
+then it should stay in the third position and not get moved.  So you can't simply order all the elements in the
+line together, the numbers must be done separate than the strings.
+
